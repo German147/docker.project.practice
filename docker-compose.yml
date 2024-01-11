@@ -1,0 +1,11 @@
+version: "3"
+services:
+  mvn-dc:
+    build: .
+    volumes:
+      - './target/:/docker.project.practice/target'
+      - './reports/:/docker.project.practice/reports'
+    environment:
+      - "SUITE=api"
+volumes:
+  target:
